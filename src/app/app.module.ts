@@ -18,8 +18,8 @@ import { NeuPageComponent } from './neu-page/neu-page.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
+    NbSidebarModule.forRoot(),
     NbLayoutModule,
-    NbSidebarModule,
     NbButtonModule,
     NbEvaIconsModule
   ],
