@@ -12,6 +12,7 @@ import { CardPageComponent } from './card-page/card-page.component';
 import { JupyterEmbedComponent } from './jupyter-embed/jupyter-embed.component';
 import { SidebarContentComponent } from './sidebar-content/sidebar-content.component';
 import { TreegridComponent } from './treegrid/treegrid.component';
+import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarget.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TreegridComponent } from './treegrid/treegrid.component';
     CardPageComponent,
     JupyterEmbedComponent,
     SidebarContentComponent,
-    TreegridComponent
+    TreegridComponent,
+    ActiveroutetargetComponent
   ],
   imports: [
     BrowserModule,

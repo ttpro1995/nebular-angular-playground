@@ -1,28 +1,40 @@
 <nb-card>
-    <nb-card-body>
+  <nb-card-body>
 
-      <table [nbTreeGrid]="data" equalColumnsWidth>
+    <table [nbTreeGrid]="data" equalColumnsWidth>
 
-        <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
+      <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns"></tr>
 
-        <ng-container [nbTreeGridColumnDef]="customColumn">
-          <td nbTreeGridCell *nbTreeGridCellDef="let row">
+      <ng-container [nbTreeGridColumnDef]="customColumn">
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
 
-            <nb-tree-grid-row-toggle
-              [expanded]="row.expanded"
-              *ngIf="row.data.kind === 'dir'">
-            </nb-tree-grid-row-toggle>
+          <nb-tree-grid-row-toggle
+            [expanded]="row.expanded"
+            *ngIf="row.data.kind === 'dir'">
+          </nb-tree-grid-row-toggle>
 
-            {{row.data.name}}
+          {{row.data.name}}
 
-          </td>
-        </ng-container>
+        </td>
+      </ng-container>
 
-        <ng-container *ngFor="let column of defaultColumns" [nbTreeGridColumnDef]="column">
-          <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data[column]}}</td>
-        </ng-container>
+      <ng-container  [nbTreeGridColumnDef]="idColumn">
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">
+          <!-- {{row.data.id}} -->
+          
+          <button *ngIf="row.data.id" nbButton [routerLink]="['/activeroutetarger', row.data.id]">{{row.data.id}}</button>
+        </td>
+      </ng-container>
 
-      </table>
+      <!-- <ng-container *ngFor="let column of idColumn" [nbTreeGridColumnDef]="column">
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data[column]}}</td>
+      </ng-container> -->
 
-    </nb-card-body>
-  </nb-card>
+      <!-- <ng-container *ngFor="let column of defaultColumns" [nbTreeGridColumnDef]="column">
+        <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data[column]}}</td>
+      </ng-container> -->
+
+    </table>
+
+  </nb-card-body>
+</nb-card>
