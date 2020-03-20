@@ -21,6 +21,10 @@ export class SidebarContentComponent implements OnInit {
     {
       title: 'tablepage',
       link: '/tablepage'
+    },
+    {
+      title: 'timepicker',
+      link: '/timepicker'
     }
    ];
 
