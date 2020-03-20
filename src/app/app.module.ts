@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbCardModule, NbMenuModule, NbTreeGridModule} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 import { NeuPageComponent } from './neu-page/neu-page.component';
 import { TablePageComponent } from './table-page/table-page.component';
 import { CardPageComponent } from './card-page/card-page.component';
@@ -29,6 +33,7 @@ import { TimepickerComponent } from './timepicker/timepicker.component';
   ],
   imports: [
     BrowserModule,
+    
     AppRoutingModule,
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
@@ -38,7 +43,10 @@ import { TimepickerComponent } from './timepicker/timepicker.component';
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
