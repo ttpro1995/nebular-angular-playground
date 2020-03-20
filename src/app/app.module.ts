@@ -13,6 +13,7 @@ import { JupyterEmbedComponent } from './jupyter-embed/jupyter-embed.component';
 import { SidebarContentComponent } from './sidebar-content/sidebar-content.component';
 import { TreegridComponent } from './treegrid/treegrid.component';
 import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarget.component';
+import { TimepickerComponent } from './timepicker/timepicker.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarge
     JupyterEmbedComponent,
     SidebarContentComponent,
     TreegridComponent,
-    ActiveroutetargetComponent
+    ActiveroutetargetComponent,
+    TimepickerComponent
   ],
   imports: [
     BrowserModule,
