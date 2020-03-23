@@ -1,7 +1,7 @@
 @import 'themes';
 
 @import '~@nebular/theme/styles/globals';
-
+@import "~ng-pick-datetime/assets/style/picker.min.css";
 @include nb-install() {
   @include nb-theme-global();
 };

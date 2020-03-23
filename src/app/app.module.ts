@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { JupyterEmbedComponent } from './jupyter-embed/jupyter-embed.component';
 import { SidebarContentComponent } from './sidebar-content/sidebar-content.component';
 import { TreegridComponent } from './treegrid/treegrid.component';
 import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarget.component';
+import { ExDatetimePickerComponent } from './ex-datetime-picker/ex-datetime-picker.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarge
     JupyterEmbedComponent,
     SidebarContentComponent,
     TreegridComponent,
-    ActiveroutetargetComponent
+    ActiveroutetargetComponent,
+    ExDatetimePickerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,10 @@ import { ActiveroutetargetComponent } from './activeroutetarget/activeroutetarge
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
-    NbEvaIconsModule
+    NbEvaIconsModule,
+    OwlDateTimeModule, 
+    OwlNativeDateTimeModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

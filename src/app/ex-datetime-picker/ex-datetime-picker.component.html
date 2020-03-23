@@ -1,0 +1,11 @@
+<p>ex-datetime-picker works!</p>
+
+<input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" [(ngModel)]="selectedMoments" placeholder="Date Time1">
+<owl-date-time #dt1></owl-date-time>
+<br> <br>
+
+<button nbButton (click)=(submit())>Submit</button>
+
+<!-- <input [owlDateTime]="dt2" placeholder="Date Time2">
+<span [owlDateTimeTrigger]="dt2"><i class="fa fa-calendar"></i></span>
+<owl-date-time #dt2></owl-date-time> -->
