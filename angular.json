@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nebular-again"
+    }
+  },
+  "defaultProject": "nebular-again",
+  "cli": {
+    "analytics": "f856bb03-6ed0-4417-a98b-a897110f2e57"
+  }
 }
