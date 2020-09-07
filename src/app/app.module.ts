@@ -8,11 +8,14 @@ import { NbThemeModule, NbLayoutModule, NbSidebarModule, NbButtonModule, NbCardM
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { CardPageComponent } from './card-page/card-page.component';
 import { TabPageComponent } from './tab-page/tab-page.component';
-
+import { TagInputComponent } from './tag-input/tag-input.component';
+import { TagInputModule } from 'ngx-chips';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     AppComponent,
     CardPageComponent,
+    TagInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,10 @@ import { TabPageComponent } from './tab-page/tab-page.component';
     NbLayoutModule,
     NbButtonModule,
     NbCardModule,
+    FormsModule,
+    ReactiveFormsModule,
     NbEvaIconsModule,
+    TagInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

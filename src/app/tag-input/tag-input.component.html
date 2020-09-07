@@ -1,0 +1,19 @@
+<p>tag-input works!</p>
+<!-- <tag-input [ngModel]="['@item']"
+           [onlyFromAutocomplete]="true">
+    <tag-input-dropdown [showDropdownIfEmpty]="true"
+                        [autocompleteItems]="['iTem1', 'item2', 'item3']">
+    </tag-input-dropdown>
+</tag-input> -->
+
+<form  [formGroup]="tagForm" (ngSubmit)="onSubmit(tagForm.value)">
+    <label for="featureTags" class="label">Tags</label>
+    <tag-input fullWidth id="featureTags" formControlName="tags" [editable]='true' [modelAsStrings]="true"
+    [onlyFromAutocomplete]='true'>
+<tag-input-dropdown [showDropdownIfEmpty]="true"
+    [autocompleteItems]="items">
+</tag-input-dropdown>
+
+</tag-input>
+    <button class="button" type="submit">submit</button>
+</form>
